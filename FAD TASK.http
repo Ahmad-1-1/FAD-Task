@@ -1,0 +1,26 @@
+@FAD_TASK_HostAddress = http://localhost:5178
+
+POST {{FAD_TASK_HostAddress}}/login
+Content-Type: application/json
+
+{
+  "email": "admin@fad.com",
+  "password": "123456"
+}
+
+###
+
+GET {{FAD_TASK_HostAddress}}/tasks
+Accept: application/json
+
+###
+
+POST {{FAD_TASK_HostAddress}}/tasks
+Content-Type: application/json
+
+{
+  "title": "Complete Qualification Challenge",
+  "description": "Build a clean ASP.NET Core 8 Web API project."
+}
+
+###
